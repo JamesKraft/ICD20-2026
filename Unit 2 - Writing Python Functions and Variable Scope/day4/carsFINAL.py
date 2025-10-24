@@ -193,7 +193,7 @@ print_line() # Prints line
 for ob in observations: # This function says that for every row, it will print the information. 
     format_observation_row(ob)
 
-print("-"*100)
+print("-"*100) # Prints another dotted line.
 
 rounded = round(get_average_bikes(observations)) # This line of code rounds the average bikes. 
 
