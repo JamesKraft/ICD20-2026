@@ -61,6 +61,15 @@ observations = {
         "intersection_type": "Traffic Light",
         "infractions": "None",
         "notes": "Sunny weather, lots of traffic"
+    },
+    8: {
+        "time": "8:50",
+        "cars": 76,
+        "pedestrians": 6,
+        "bikes": 0,
+        "intersection_type": "Traffic Light",
+        "infractions": "None",
+        "notes": "Sunny weather, lots of traffic"
     }
 }
 
@@ -155,7 +164,7 @@ def get_average_bikes(observations):
 def format_observation_row(obs_num):
     # Takes in an observation number (#1-7)
     # formats a single row of observations for use in the table
-    # Returns: str (a nicely formatted line of code)
+    # Returns: None. It prints
     obs = get_observation(observations, obs_num) # Defines obs as get_observation function to retrieve observations
     print(f"{obs_num:<6} | {get_observation_time(obs):<6} | {get_observation_cars(obs):<6} | {get_observation_pedestrians(obs):<6} | {get_observation_bikes(obs):<6} | {get_observation_type(obs):<6} | {get_observation_notes(obs):<6}")
     # Line above prints out information for the rows. 
@@ -173,9 +182,6 @@ def print_line():
     # Returns: None
     print("-"*100)
 
-
-
-
 def print_totals(get_total_cars, get_total_pedestrians, get_average_bikes):
     # Prints the total cars, total pedestrians, and average bikes
     # after all observations are displayed.
@@ -190,7 +196,7 @@ def print_totals(get_total_cars, get_total_pedestrians, get_average_bikes):
 print_table_header() # Calls header
 print_line() # Prints line
 
-for ob in observations: # This function says that for every row, it will print the information. 
+for ob in observations: # This is a loop that says for every row, it will print the information. The "ob" just means that for the rows in observation, that is what it will print. 
     format_observation_row(ob)
 
 print("-"*100) # Prints another dotted line.
