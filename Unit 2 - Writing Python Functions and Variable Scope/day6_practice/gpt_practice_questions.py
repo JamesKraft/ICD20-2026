@@ -9,7 +9,7 @@ def rotate_right2(str):
 
 def sandwich_center(str,stra):
     cal = (len(str))//2
-    return str + (stra[cal-1:cal+1]) 
+    return str + (stra[cal-1:cal+1]) + str
 
 def format_total_price(price, quantity, decimals, tax):
     total = (price*quantity)*((tax*0.01)+1)
